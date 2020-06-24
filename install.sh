@@ -139,7 +139,7 @@ pre_install_docker_compose(){
 
     # Set ssrpanel node_id
     echo "你前端节点信息里面的节点ID"
-    read -p "(就你他妈前端添加节点后生成的ID 比如说是3这样子):" ssrpanel_node_id
+    read -p "(就是前端添加节点后生成的ID 比如说是3这样子):" ssrpanel_node_id
     [ -z "${ssrpanel_node_id}" ] && ssrpanel_node_id=0
     echo
     echo "---------------------------"
@@ -333,10 +333,9 @@ install_docker(){
     echo -e "恭喜，V2ray服务器安装完成！"
     echo
     echo "注意:安装完成不代表对接成功 可能原因有："
-    echo "1、你没有钱，所以你的命运比较悲惨导致对接失败了"
-    echo "2、你的系统或者管理面板内置防火墙 请关闭或放行"
-    echo "3、脚本配置信息输入有误 检查前端网址密钥节点ID"
-    echo "4、玄学问题 你太帅导致的 指导联系TG@WocaonimaB"
+    echo "1、你的系统或者管理面板内置防火墙 请关闭或放行"
+    echo "2、脚本配置信息输入有误 检查前端网址密钥节点ID"
+    echo "3、玄学问题 你太帅导致的"
     echo
 }
 
@@ -370,7 +369,7 @@ install_select(){
         break
         ;;
         *)
-        echo -e "[${red}Error${plain}] 别瞎几把乱输,请输入正确数字"
+        echo -e "[${red}Error${plain}] 请输入正确数字"
         ;;
     esac
     done
@@ -484,7 +483,7 @@ clear
 while true
 do
 echo -e "\033[42;30m RICO破解版脚本 By：章鱼哥 \033[0m"
-echo -e "\033[42;30m 如需商用请购买正版 章鱼哥TG:@WocaonimaB \033[0m"
+echo -e "\033[42;30m 如需商用请购买正版 \033[0m"
 echo  ""
 echo  "请输入数字选择你要进行的操作："
 for ((i=1;i<=${#operation[@]};i++ )); do
@@ -502,7 +501,7 @@ case "${selected}" in
     break
     ;;
     *)
-    echo -e "[${red}Error${plain}] 你妈逼啊,请输入正确数字 [1-4]"
+    echo -e "[${red}Error${plain}] 请输入正确数字 [1-4]"
     ;;
 esac
 done
